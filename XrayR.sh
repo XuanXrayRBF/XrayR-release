@@ -84,7 +84,7 @@ before_show_menu() {
 }
 
 install() {
-    bash <(curl -Ls https://raw.githubusercontent.com/XuanXrayRBF/XrayR-release/master/install.sh)
+    bash <(curl -Ls https://raw.githubusercontent.com/XuanXrayRBF/XrayR/master/install.sh) $version
     if [[ $? == 0 ]]; then
         if [[ $# == 0 ]]; then
             start
@@ -270,7 +270,7 @@ install_bbr() {
 }
 
 update_shell() {
-    wget -O /usr/bin/XrayR -N --no-check-certificate https://raw.githubusercontent.com/XuanXrayRBF/XrayR-release/master/XrayR.sh
+    wget -O /usr/bin/XrayR -N --no-check-certificate https://raw.githubusercontent.com/XuanXrayRBF/XrayR/master/XrayR.sh
     if [[ $? != 0 ]]; then
         echo ""
         echo -e "${red}下载脚本失败，请检查本机能否连接 Github${plain}"
