@@ -84,7 +84,7 @@ before_show_menu() {
 }
 
 install() {
-    bash <(curl -Ls https://raw.githubusercontent.com/XuanXrayRBF/XrayR-release/master/install.sh)
+    bash <(curl -Ls https://raw.githubusercontent.com/XuanXrayRBF/XrayR-release/master/install.sh) $version
     if [[ $? == 0 ]]; then
         if [[ $# == 0 ]]; then
             start
